@@ -4,9 +4,11 @@ function isPrime(_number: number) :boolean {
     }
     return _number >= 2; 
 }
-
+ 
 function getArrayPrimeNumber(_listOfNumber : Array<number>): Array<number>{
     return _listOfNumber.filter((_number)=>isPrime(_number));
 } 
+class TestClass {
+}
 export {isPrime}
 export {getArrayPrimeNumber}
