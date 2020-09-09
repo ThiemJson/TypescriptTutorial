@@ -40,15 +40,41 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var axios_1 = __importDefault(require("axios"));
 var AxiosInstance = axios_1.default.create();
+// function getCasestaFromMonth(
+//   month: string,
+//   day: string
+// ): Promise<number | Error> {
+//   return AxiosInstance.get(
+//     `https://api.covid19api.com/country/vietnam/status/confirmed?from=2020-${month}-01T00:00:00Z&to=2020-${month}-${day}T00:00:00Z`
+//   )
+//     .then((res) => res.data)
+//     .then((dataJSON): number => {
+//       return dataJSON[parseInt(day) - 1]["Cases"] - dataJSON[0]["Cases"];
+//     })
+//     .catch(
+//       (err: Error): Error => {
+//         console.log(err);
+//         return err;
+//       }
+//     );
+// }
 function getCasestaFromMonth(month, day) {
     return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, AxiosInstance.get("https://api.covid19api.com/country/vietnam/status/confirmed?from=2020-" + month + "-01T00:00:00Z&to=2020-" + month + "-" + day + "T00:00:00Z")
-                        .then(function (res) { return res.data; })
-                        .then(function (dataJSON) { return (dataJSON[parseInt(day) - 1]["Cases"]) - dataJSON[0]["Cases"]; })
-                        .catch(function (err) { return console.log(err); })];
-                case 1: return [2 /*return*/, _a.sent()];
+        var response, dataJSON, _a;
+        return __generator(this, function (_b) {
+            switch (_b.label) {
+                case 0:
+                    _b.trys.push([0, 2, , 3]);
+                    return [4 /*yield*/, AxiosInstance.get("https://api.covid19api.com/country/vietnam/status/confirmed?from=2020-" + month + "-01T00:00:00Z&to=2020-" + month + "-" + day + "T00:00:00Z")];
+                case 1:
+                    response = _b.sent();
+                    dataJSON = response.data;
+                    return [2 /*return*/, dataJSON[parseInt(day) - 1]["Cases"] - dataJSON[0]["Cases"]];
+                case 2:
+                    _a = _b.sent();
+                    console.log("got err");
+                    return [3 /*break*/, 3];
+                case 3: return [2 /*return*/];
             }
         });
     });

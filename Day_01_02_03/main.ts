@@ -1,8 +1,8 @@
-import {isPrime} from "./module_getArrayPrimeNumber"
-import {getArrayPrimeNumber} from "./module_getArrayPrimeNumber"
-import {getCasestaFromMonth} from "./module_getCases"
-import {MONTH} from "./models/Times"
-import {DATE} from "./models/Times"
+import { isPrime } from "./module_getArrayPrimeNumber";
+import { getArrayPrimeNumber } from "./module_getArrayPrimeNumber";
+import { getCasestaFromMonth } from "./module_getCases";
+import { MONTH } from "./models/Times";
+import { DATE } from "./models/Times";
 // Demo Get PrimeNumber
 /*
 let ArrayOfNumber = Array<number>(100);
@@ -15,11 +15,9 @@ ArrayOfNumber.forEach(element => {
 });
 */
 //Demo get Cases from Month
-( async ()=> {
-    let casesOfFirstMonth = await getCasestaFromMonth(MONTH.July, DATE.July)
-    let casesOfSecondMonth = await getCasestaFromMonth(MONTH.August , DATE.August)
-    console.log(`Cases of firstMonth: ${casesOfFirstMonth}`)
-    console.log(`Cases of secondMonth: ${casesOfSecondMonth}`)
-})()
-
-   
+(async () => {
+  let casesOfFirstMonth = await getCasestaFromMonth(MONTH.January, DATE.January);
+  let casesOfSecondMonth = await getCasestaFromMonth(MONTH.August, DATE.August);
+  console.log(`Cases of firstMonth: ${casesOfFirstMonth}`);
+  console.log(`Cases of secondMonth: ${casesOfSecondMonth}`);
+})();

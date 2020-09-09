@@ -55,7 +55,7 @@ ArrayOfNumber.forEach(element => {
     var casesOfFirstMonth, casesOfSecondMonth;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, module_getCases_1.getCasestaFromMonth(Times_1.MONTH.July, Times_2.DATE.July)];
+            case 0: return [4 /*yield*/, module_getCases_1.getCasestaFromMonth(Times_1.MONTH.January, Times_2.DATE.January)];
             case 1:
                 casesOfFirstMonth = _a.sent();
                 return [4 /*yield*/, module_getCases_1.getCasestaFromMonth(Times_1.MONTH.August, Times_2.DATE.August)];
